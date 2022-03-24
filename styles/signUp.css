@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ca8e6c62;
+}
+
+.footer {
+  position: relative;
+  top: 9rem;
+  bottom: 0;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+  gap: 2rem 0;
+  margin: 2rem 0;
+}
+
+.formContainer h1 {
+  font-size: 2.5rem;
+  color: rgb(88, 88, 88);
+  font-weight: bold;
+}
+
+.formContainer input {
+  outline: 2px solid rgba(128, 128, 128, 0);
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  width: 450px;
+  margin: 0 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.formContainer input[type="checkbox"] {
+  width: fit-content;
+  outline: none;
+  transform: scale(1.5);
+  margin: 1rem 1.5rem 0;
+}
+
+.formContainer label {
+  text-align: center;
+}
+
+.formContainer input[type="checkbox"]:hover {
+  outline: none !important;
+  border: none !important;
+  box-shadow: 2px 2px 8px grey;
+}
+
+.formContainer input:hover {
+  outline: 4px solid #f4f4f4;
+}
+
+.formContainer input::placeholder {
+  color: gray;
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+
+.button-container {
+  display: flex;
+  gap: 0 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-one,
+.button-two {
+  position: relative;
+  font-size: 1.2rem;
+  color: #f4f4f4;
+  background: #ca8e6c62;
+  border: none;
+  padding: 1rem;
+  border-radius: 12px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.2s ease-in;
+}
+
+.button-one::after,
+.button-two::after {
+  border-radius: 12px;
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  transform: scaleX(0);
+  transition: transform 200ms ease-in;
+  transform-origin: right;
+}
+
+.button-one:hover::after,
+.button-two:hover::after {
+  border-radius: 12px;
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.button-two {
+  text-decoration: none;
+  color: #f4f4f4;
+  display: inline-block;
+}
+
+.button-one:hover {
+  background-color: green;
+}
+
+.button-two:hover {
+  background-color: red;
+}
